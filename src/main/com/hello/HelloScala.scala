@@ -8,6 +8,8 @@ object HelloScala {
   def main(args: Array[String]): Unit = {
     println(" Hello Scala!")
     println("abs1=" + Fun.abs(100))
+    println("abs2=" + Fun.abs(0))
+    println("abs3=" + Fun.abs(-100))
     println("fac1=" + Fun.fac(1))
     println("fac2=" + Fun.fac(2))
     println("fac3=" + Fun.fac(3))
@@ -22,6 +24,8 @@ object HelloScala {
     println("recursiveSum1=" + Fun.recursiveSum(1))
     println("recursiveSum2=" + Fun.recursiveSum(1, 2, 3, 4, 5))
     println("recursiveSum3=" + Fun.recursiveSum(1 to 100: _*))
+    Fun.box("Hello")
+    for (i <- 0 to 10) print(i + ", ")
   }
 
 

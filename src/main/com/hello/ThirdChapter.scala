@@ -36,10 +36,41 @@ object ThirdChapter {
     println("e=" + e)
     val f = c.filter{_ % 2 == 0} map{2 * _}
     println("f=" + f)
-    var a = ArrayBuffer[Int]()
-    a += (1, 2, -3, 4, -5, 7, 0)
+    var a = ArrayBuffer(1, 2, -3, 4, -5, 7, 0)
     println("a=" + a)
     a = Fun.array2(a)
     println("a=" + a)
+    println("sum(a)=" + a.sum)
+    val b1 = ArrayBuffer(1, 3, 99, 6, 0)
+    val b1Sorted = b1.sortWith(_ < _)
+    println("b1=" + b1)
+    println("b1Sorted=" + b1Sorted)
+    val b1Desending = b1.sortWith(_ > _)
+    println("b1Desending=" + b1Desending)
+    val a2 = Array(1, 3, 0, 66, 8, 12)
+    print("a2=")
+    for (i <- a2) print(i + ", ")
+    println()
+    scala.util.Sorting.quickSort(a2)
+    print("a2=")
+    for (i <- a2) print(i + ", ")
+    println()
+    val a2Str = a2.mkString(", ")
+    println("a2Str=" + a2Str)
+    val a2Str2 = a2.mkString("[", ", ", "]")
+    println("a2Str2=" + a2Str2)
+    b1.append(1, 2, 3, 4, 5)
+    println("b1=" + b1)
+    b1.appendAll(a2)
+    println("b1=" + b1)
+    println("b1(>0).count=" + b1.count(_>0))
+    println("b1(<0).count=" + b1.count(_<=0))
+    b1 += 6 -= 7
+    println("b1=" + b1)
+    import scala.collection.mutable.ArrayBuffer
+    val command = ArrayBuffer("ls", "-al", "/")
+//    val pb = new ProcessBuilder(command)
+
+
   }
 }
